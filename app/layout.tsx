@@ -2,12 +2,13 @@ import type React from "react"
 import "./globals.css"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
+import { Toaster } from "@/components/ui/sonner"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Split Layout Page",
-  description: "A page with 3 sections using horizontal and vertical splits",
+  title: "Movielens 20M Ratings",
+  description: "Recommender System using 20M Movie Ratings",
 }
 
 export default function RootLayout({
@@ -17,7 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <Toaster richColors expand={true} closeButton={true} style={{ width: '400px', fontSize: '16px' }} />
+      </body>
     </html>
   )
 }
