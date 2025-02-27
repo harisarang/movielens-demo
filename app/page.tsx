@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { Input } from "@/components/ui/input"
 import { Search, RefreshCw } from "lucide-react"
 import Image from "next/image"
-import { searchMovies, addEvent, getRecommendations } from "@/lib/typesense"
+import { searchMovies, addEvent, getRecommendations } from "@/lib/apiCall"
 import { toast } from "sonner"
 
 export default function Home() {
