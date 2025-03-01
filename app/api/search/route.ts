@@ -13,6 +13,7 @@ export async function GET(request: NextRequest) {
         query_by_weights: "2,2,1,1",
         per_page: 20,
         q: query,
+        exclude_fields: "user_embedding, item_embedding",
       }],
     });
 
